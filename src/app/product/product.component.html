@@ -1,0 +1,23 @@
+<app-category></app-category>
+<div class="form-group">
+  <input type="email" class="form-control" id="productName" placeholder="Product Search" [(ngModel)]="filterText">
+  <small *ngIf="filterText" class="form-text text-muted">Now searching for {{filterText}}</small>
+</div>
+
+<!-- <h3 *ngIf="products; else noProduct">{{title}}</h3> -->
+
+<div class="row">
+  <ng-template #noProduct>
+    <div class="alert alert-danger" role="alert">
+      No products exists in this category.
+    </div>
+  </ng-template>
+  <div *ngFor="let product of products | productFilter:filterText" class="card" class="product-box"style="width: 18rem;">
+    <img [src]="product.ImageUrl" class="card-img-top" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{product.name}} {{product.price |currency:'USD':'symbol'}} $</h5>
+      <p class="card-text">{{product.description}}</p>
+      <a (click)="addToCart(product)" class="btn btn-primary">Add to Basket</a>
+    </div>
+  </div>
+</div>
