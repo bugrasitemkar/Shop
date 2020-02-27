@@ -1,0 +1,31 @@
+<h3>Add Product - Reactive</h3>
+<form [formGroup]="productAddForm" (ngSubmit)="add()">
+<div class="form-group">
+    <input placeholder = "Product Name" type="text" id="productName" name="productName" class="form-control" formControlName="name">
+    <div class="alert alert-danger" *ngIf="productAddForm.get('name').hasError('required') && productAddForm.get('name').dirty">Product Name is Required</div>
+</div>
+
+ <div class="form-group">
+   <input placeholder = "Product Description" type="text" id="productDescription" name="productDescription" class="form-control" formControlName="description">
+    <div class="alert alert-danger" *ngIf="productAddForm.get('description').hasError('required') && productAddForm.get('description').dirty">Product Description is Required</div>
+</div>
+
+<div class="form-group">
+    <input placeholder = "Product Image" type="text" id="productImageUrl" name="productImageUrl" class="form-control" formControlName="ImageUrl">
+    <div class="alert alert-danger" *ngIf="productAddForm.get('ImageUrl').hasError('required') && productAddForm.get('ImageUrl').dirty">Product Image is Required</div>
+</div>
+
+<div class="form-group">
+    <input placeholder = "Product Price" type="text" id="productPrice" name="productPrice" class="form-control" formControlName="price">
+     <div class="alert alert-danger" *ngIf="productAddForm.get('price').hasError('required') && productAddForm.get('price').dirty">Product Price is Required</div>
+ </div>
+
+ <div class="form-group">
+    <select class="form-control"  formControlName="categoryId"  name="productCategoryId" id="productCategoryId"> 
+        <option *ngFor = "let category of categories" [value]="category.id">{{category.name}}</option>
+    </select>
+    <div *ngIf="productAddForm.get('categoryId').hasError('required') && productAddForm.get('categoryId').touched" class="alert alert-danger">Product Category is Required</div> 
+</div>
+<button type="submit" class="btn btn-primary"[disabled] ="productAddForm.invalid">Add Product</button>
+
+</form>
