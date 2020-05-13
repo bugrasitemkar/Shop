@@ -2,7 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AccountService } from '../services/account.service';
 import { User } from './user';
+import { RouterModule, Routes, Router } from '@angular/router';
 
+const routes: Routes = [
+  { path: 'products', redirectTo: '/products', pathMatch: 'full' }
+];
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -12,13 +16,17 @@ import { User } from './user';
 export class LoginComponent implements OnInit {
 
   model:User=new User();
-  constructor(private accountService:AccountService) { }
+  constructor(private accountService:AccountService,private router: Router) { }
 
   ngOnInit() {
   }
 
 
   login(form:NgForm){
-    this.accountService.login(this.model)
+    let loggedIn = this.accountService.login(this.model)
+    if(loggedIn)
+    {
+      this.router.navigate(['/products']);
+    }
   }
 }
