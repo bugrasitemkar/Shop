@@ -26,3 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 * Dynamic category and product displaying
 * Static login to Admin Panel
 * Alertify implementation
+
+## Screenshots
+![Product Page](https://github.com/bugrasitemkar/Shop/blob/master/Screenshots/Product%20Page.png?raw=true)
+
