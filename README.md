@@ -1,6 +1,10 @@
-# Shop
+# Mock E-Commerce Shop
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
+This mock e-commerce shop project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21 with the sole purpose of Angular framework practice.
+
+## Prequisites
+* Install [NodeJs](https://nodejs.org/en/download/).
+* Install [Json-Server](https://www.npmjs.com/package/json-server) and run for `shop.json` file included in the repository.
 
 ## Development server
 
@@ -18,6 +22,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Features
+* Dynamic category and product displaying
+* Static login to Admin Panel
+* Alertify implementation
