@@ -28,5 +28,19 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 * Alertify implementation
 
 ## Screenshots
+
+#### Product Page
 ![Product Page](https://github.com/bugrasitemkar/Shop/blob/master/Screenshots/Product%20Page.png?raw=true)
+
+#### Login Page
+![Login Page](https://github.com/bugrasitemkar/Shop/blob/master/Screenshots/Login%20Page.png?raw=true)
+
+#### Admin User
+![Admin User](https://github.com/bugrasitemkar/Shop/blob/master/Screenshots/Admin%20User.png?raw=true)
+
+#### Add Product Form
+![Add Product Form](https://github.com/bugrasitemkar/Shop/blob/master/Screenshots/Add%20Product%20Page.png?raw=true)
+
+#### Add Product Form Validation
+![Add Product Form Validation](https://github.com/bugrasitemkar/Shop/blob/master/Screenshots/Add%20Product%20Error.png?raw=true)
 
